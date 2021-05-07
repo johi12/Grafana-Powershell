@@ -15,7 +15,7 @@
     CompatiblePSEditions = @('Desktop', 'Core')
 
     # Which PowerShell functions are exported from your module? (eg. Get-CoolObject)
-    FunctionsToExport    = @('Add-Annotation', 'Initialize-Authentication')
+    FunctionsToExport    = @('Add-Annotation', 'Initialize-Session', 'Remove-Annotation')
 
     # Which PowerShell aliases are exported from your module? (eg. gco)
     AliasesToExport      = @('')
@@ -27,10 +27,10 @@
     PrivateData          = @{
         PSData = @{
             # What keywords represent your PowerShell module? (eg. cloud, tools, framework, vendor)
-            Tags         = @('Grafana', 'tools', 'annotations')
+            Tags       = @('Grafana', 'tools', 'annotations')
 
             # What software license is your code being released under? (see https://opensource.org/licenses)
-            LicenseUri   = 'https://opensource.org/licenses/Apache-2.0'
+            LicenseUri = 'https://opensource.org/licenses/Apache-2.0'
         }
     }
 }

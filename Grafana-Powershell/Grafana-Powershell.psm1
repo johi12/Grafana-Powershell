@@ -3,8 +3,9 @@ $ModuleName = $ExecutionContext.SessionState.Module
 Write-Verbose -Message "Loading module $ModuleName"
 
 $GrafanaSession = [ordered]@{
-    BaseUrl = $null
-    ApiKey  = $null
+    BaseUrl   = $null
+    ApiKey    = $null
+    UtcOffset = $null
 }
 
 try {

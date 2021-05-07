@@ -4,6 +4,8 @@ function ConvertTo-Epoch {
         Converts DateTime ojbect to the Unix Epoch Time format in milliseconds
         E.g. milliseconds gone by since 1970-01-01
 
+        Why MilliSeconds and not seoncds? Because grafana, that's why.
+
     .PARAMETER Date
         A date
 
@@ -19,8 +21,12 @@ function ConvertTo-Epoch {
         )] [datetime]$Date,
         [Parameter(
             Mandatory = $false
-        )] [Switch] $MilliSeconds
+        )] [Switch] $MilliSeconds,
+        [Parameter(
+            Mandatory = $false
+        )] [int] $UtcOffset = $GrafanaSession.UtcOffset
     )
+
     $Unit = if ($MilliSeconds) {
         "TotalMilliseconds"
     }
@@ -28,7 +34,7 @@ function ConvertTo-Epoch {
         "TotalSeconds"
     }
 
-    $Epoch = [timezone]::CurrentTimeZone.ToLocalTime([datetime]'1/1/1970')
+    $Epoch = (Get-Date -Date "1970-01-01 00:00:00Z").ToUniversalTime().AddHours($UtcOffset)
     $Result = [int64](New-TimeSpan -Start $Epoch -End $Date).$Unit
 
     return $Result
