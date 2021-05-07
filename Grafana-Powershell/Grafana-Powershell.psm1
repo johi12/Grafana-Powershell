@@ -8,6 +8,8 @@ $GrafanaSession = [ordered]@{
     UtcOffset = $null
 }
 
+Write-Debug $GrafanaSession
+
 try {
     foreach ($Scope in 'Public', 'Private') {
         Get-ChildItem (Join-Path -Path $ScriptPath -ChildPath $Scope) -Filter *.ps1 | ForEach-Object {
