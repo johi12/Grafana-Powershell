@@ -37,7 +37,7 @@ function Add-Annotation {
         To annotate specific dashboard panel.
 
     .LINK
-        https://grafana.com/docs/grafana/latest/http_api/annotations/
+        https://grafana.com/docs/grafana/latest/http_api/annotations/#create-annotation
 
     #>
 
@@ -87,6 +87,6 @@ function Add-Annotation {
         "Body"    = $Body | ConvertTo-Json
     }
 
-    $Request = Invoke-RestMethod @Params -ErrorAction Stop
-    $Request
+    $Request = Invoke-WebRequest @Params -ErrorAction Stop
+    Write-Output $Request.Content
 }
