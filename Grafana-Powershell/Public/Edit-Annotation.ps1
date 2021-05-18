@@ -67,7 +67,7 @@ function Edit-Annotation {
     }
 
     if ($PSCmdlet.ShouldProcess($Params.URI, "Update Annotation $Id")) {
-        $Request = Invoke-WebRequest @Params -ErrorAction STOP
+        $Request = Invoke-WebRequest @params -UseBasicParsing -ErrorAction STOP
         Write-Output $Request.Content
     }
 }

@@ -18,7 +18,7 @@ function Confirm-Url {
         )] [string] $Url
 
     )
-    $Request = Invoke-WebRequest $Url
+    $Request = Invoke-WebRequest $Url -UseBasicParsing
 
     if ($Request.StatusDescription -eq "OK") {
         return $true

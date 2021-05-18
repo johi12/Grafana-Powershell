@@ -87,6 +87,6 @@ function Add-Annotation {
         "Body"    = $Body | ConvertTo-Json
     }
 
-    $Request = Invoke-WebRequest @Params -ErrorAction Stop
+    $Request = Invoke-WebRequest @params -UseBasicParsing -ErrorAction Stop
     Write-Output $Request.Content
 }
