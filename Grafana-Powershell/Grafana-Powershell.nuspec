@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>Grafana-Powershell</id>
+    <version>0.0.1</version>
+    <authors>hindejon</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Interact with Grafana HTTP API</description>
+    <releaseNotes>Initial release</releaseNotes>
+    <copyright>copyright 2021</copyright>
+    <tags>PSModule</tags>
+    <dependencies>
+    </dependencies>
+  </metadata>
+</package>

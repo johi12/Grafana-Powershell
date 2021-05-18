@@ -3,7 +3,7 @@
 
     Author               = 'Jonas Hinderson <jonas.hinderson@protonmail.com>'
 
-    ModuleVersion        = '0.1'
+    ModuleVersion        = '0.0.1'
     GUID                 = '6af5974b-15b6-4724-9313-e5ac468dfd76'
 
     Copyright            = '2021 Jonas Hinderson'

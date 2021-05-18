@@ -31,7 +31,7 @@ function Remove-Annotation {
     }
 
     if ($PSCmdlet.ShouldProcess($Params.URI, "Remove Annotation $Id")) {
-        $Request = Invoke-WebRequest @params -UseBasicParsing -ErrorAction STOP
+        $Request = Invoke-WebRequest @Params -UseBasicParsing -ErrorAction STOP
         Write-Output $Request.Content
     }
 }

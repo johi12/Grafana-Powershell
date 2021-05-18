@@ -56,7 +56,7 @@ function Initialize-GrafanaSession {
 
     }
 
-    $Request = Invoke-WebRequest @params -UseBasicParsing -ErrorAction STOP
+    $Request = Invoke-WebRequest @Params -UseBasicParsing -ErrorAction STOP
 
     Write-Output "Setting UTC offset to $UtcOffset"
     $GrafanaSession.UtcOffset = $UtcOffset
