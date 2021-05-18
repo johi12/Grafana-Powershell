@@ -15,7 +15,7 @@
     CompatiblePSEditions = @('Desktop', 'Core')
 
     # Which PowerShell functions are exported from your module? (eg. Get-CoolObject)
-    FunctionsToExport    = @('Add-Annotation', 'Initialize-GrafanaSession', 'Remove-Annotation')
+    FunctionsToExport    = @('Initialize-GrafanaSession', 'Add-Annotation', 'Remove-Annotation', 'Edit-Annotation', 'Update-Annotation')
 
     # Which PowerShell aliases are exported from your module? (eg. gco)
     AliasesToExport      = @('')
